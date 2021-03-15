@@ -1,0 +1,18 @@
+[package]
+name = "gene_overlap"
+version = "0.1.0"
+authors = ["Will Brickner <wgbrickner@gmail.com>"]
+edition = "2018"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+opt-level = 3
+
+[dependencies]
+arraystring = { version = "0.3.0", features = ["serde-traits"] }
+clap = "3.0.0-beta.2"
+csv = "1.1.6"
+intervaltree = "0.2.6"
+rayon = "1.5.0"
+serde = { version = "1", features = ["derive"] }
